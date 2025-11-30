@@ -78,4 +78,882 @@
         }
 
         .nav-cta {
-            padding: 0.6rem 1.2rem
+            padding: 0.6rem 1.2rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(168, 85, 247, 0.1);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: #c4b5fd;
+            margin-bottom: 2rem;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #a855f7;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+        }
+
+        h1 span {
+            background: linear-gradient(135deg, #a855f7 0%, #6366f1 50%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+            color: #a1a1aa;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+        }
+
+        /* Waitlist Form */
+        .waitlist-form {
+            display: flex;
+            gap: 0.75rem;
+            width: 100%;
+            max-width: 480px;
+            margin-bottom: 1rem;
+        }
+
+        .waitlist-form input {
+            flex: 1;
+            padding: 1rem 1.25rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .waitlist-form input::placeholder {
+            color: #71717a;
+        }
+
+        .waitlist-form input:focus {
+            border-color: #a855f7;
+            background: rgba(168, 85, 247, 0.05);
+        }
+
+        .waitlist-form button {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+            border: none;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .waitlist-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(168, 85, 247, 0.3);
+        }
+
+        .form-note {
+            font-size: 0.875rem;
+            color: #71717a;
+        }
+
+        /* Success State */
+        .success-message {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem;
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 16px;
+            max-width: 480px;
+        }
+
+        .success-message.show {
+            display: flex;
+        }
+
+        .success-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(34, 197, 94, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .success-message h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .success-message p {
+            color: #a1a1aa;
+            text-align: center;
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 4rem;
+            padding-top: 4rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: #71717a;
+            margin-top: 0.25rem;
+        }
+
+        /* Featured Products */
+        .featured-products {
+            margin-top: 3rem;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .featured-label {
+            font-size: 0.875rem;
+            color: #a1a1aa;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .product-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .product-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 50px;
+            color: #fff;
+            font-size: 0.875rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .product-btn:hover {
+            background: rgba(168, 85, 247, 0.15);
+            border-color: rgba(168, 85, 247, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .product-icon {
+            font-size: 1rem;
+        }
+
+        .product-name {
+            font-weight: 500;
+        }
+
+        .product-tag {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        /* Enquiry Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+        }
+
+        .modal {
+            background: #111;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 450px;
+            width: 100%;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: #71717a;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #fff;
+        }
+
+        .modal h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-product {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(168, 85, 247, 0.15);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: #c4b5fd;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .modal-form input,
+        .modal-form textarea {
+            padding: 0.875rem 1rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .modal-form input::placeholder,
+        .modal-form textarea::placeholder {
+            color: #71717a;
+        }
+
+        .modal-form input:focus,
+        .modal-form textarea:focus {
+            border-color: #a855f7;
+            background: rgba(168, 85, 247, 0.05);
+        }
+
+        .modal-form textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .modal-form button {
+            padding: 1rem;
+            background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .modal-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(168, 85, 247, 0.3);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #a1a1aa;
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            background: rgba(255,255,255,0.04);
+            border-color: rgba(168, 85, 247, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: #a1a1aa;
+            line-height: 1.6;
+        }
+
+        /* How it Works */
+        .how-it-works {
+            padding: 6rem 2rem;
+            background: rgba(255,255,255,0.01);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .steps {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .step {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .step-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            color: #a1a1aa;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 8rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            color: #a1a1aa;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            color: #71717a;
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: #a1a1aa;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 640px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .hero {
+                padding: 7rem 1.5rem 3rem;
+            }
+
+            .waitlist-form {
+                flex-direction: column;
+            }
+
+            .waitlist-form button {
+                width: 100%;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .product-buttons {
+                flex-direction: column;
+            }
+
+            .product-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .features, .how-it-works, .cta-section {
+                padding: 4rem 1.5rem;
+            }
+
+            .step {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="grid-pattern"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">DHIVE</div>
+        <button class="nav-cta" onclick="document.querySelector('.hero').scrollIntoView({behavior: 'smooth'})">Join Waitlist</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="badge">
+            <span class="badge-dot"></span>
+            Launching Soon
+        </div>
+        
+        <h1>Buy. Sell. Build.<br><span>Digital Products.</span></h1>
+        
+        <p class="subtitle">The marketplace for digital products. Buy ready-to-use tools, sell your creations, or build your own with AI — no code required.</p>
+
+        <form class="waitlist-form" id="waitlistForm">
+            <input type="email" placeholder="Enter your email" required id="emailInput">
+            <button type="submit">Join Waitlist</button>
+        </form>
+        <p class="form-note">Join 100+ creators waiting for launch. No spam, ever.</p>
+
+        <div class="success-message" id="successMessage">
+            <div class="success-icon">✓</div>
+            <h3>You're on the list!</h3>
+            <p>We'll notify you when DHIVE launches. Get ready to build something amazing.</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">Buy</div>
+                <div class="stat-label">Ready-to-use tools</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">Sell</div>
+                <div class="stat-label">Your creations</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">Build</div>
+                <div class="stat-label">No code needed</div>
+            </div>
+        </div>
+
+        <!-- Featured Products Preview -->
+        <div class="featured-products">
+            <p class="featured-label">Available Now</p>
+            <div class="product-buttons">
+                <button class="product-btn" onclick="openEnquiry('Business Budget Planner')">
+                    <span class="product-icon">📊</span>
+                    <span class="product-name">Business Budget Planner</span>
+                    <span class="product-tag">Free</span>
+                </button>
+                <button class="product-btn" onclick="openEnquiry('Social Media Template Pack')">
+                    <span class="product-icon">📱</span>
+                    <span class="product-name">Social Media Template Pack</span>
+                    <span class="product-tag">Free</span>
+                </button>
+                <button class="product-btn" onclick="openEnquiry('Startup Launch Guide')">
+                    <span class="product-icon">🚀</span>
+                    <span class="product-name">Startup Launch Guide</span>
+                    <span class="product-tag">Free</span>
+                </button>
+                <button class="product-btn" onclick="openEnquiry('Notion Productivity System')">
+                    <span class="product-icon">✨</span>
+                    <span class="product-name">Notion Productivity System</span>
+                    <span class="product-tag">Free</span>
+                </button>
+                <button class="product-btn" onclick="openEnquiry('Brand Identity Kit')">
+                    <span class="product-icon">🎨</span>
+                    <span class="product-name">Brand Identity Kit</span>
+                    <span class="product-tag">Free</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2 class="section-title">Why Creators Choose DHIVE</h2>
+        <p class="section-subtitle">Everything you need to turn your ideas into income.</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>AI-Powered Builder</h3>
+                <p>Describe what you want to build. Our AI assistant helps you create functional digital products without writing a single line of code.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Earn From Your Ideas</h3>
+                <p>Turn your AI tool ideas into a revenue stream. Your tools, your earnings. We only succeed when you do.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>Instant Distribution</h3>
+                <p>List your product and reach thousands of potential buyers immediately. Built-in audience, zero marketing needed.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Creator Dashboard</h3>
+                <p>Track sales, manage customers, and optimise your listings with real-time analytics and insights.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔌</div>
+                <h3>Plug & Play Products</h3>
+                <p>Every product works out of the box. Buyers get instant value, you get happy customers and repeat sales.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Secure Payments</h3>
+                <p>Built-in checkout and payment processing. Get paid directly to your account, hassle-free.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">From idea to income in three simple steps.</p>
+
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Describe Your Product</h3>
+                    <p>Tell our AI what you want to build. A template? A tool? An automation? Just describe it in plain English.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Refine & Publish</h3>
+                    <p>Our builder creates your tool. Preview it, tweak it, and when you're happy, set your price and publish to the marketplace.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Earn & Grow</h3>
+                    <p>Buyers discover your product, purchase it, and you earn from every sale. Scale up by building more products or improving existing ones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <h2>Ready to Get Started?</h2>
+        <p>Join the waitlist and be first in line when DHIVE launches. Your digital product journey starts here.</p>
+        
+        <form class="waitlist-form" id="waitlistForm2" style="margin: 0 auto;">
+            <input type="email" placeholder="Enter your email" required id="emailInput2">
+            <button type="submit">Join Waitlist</button>
+        </form>
+    </section>
+
+    <!-- Enquiry Modal -->
+    <div class="modal-overlay" id="enquiryModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeEnquiry()">&times;</button>
+            <h3>Get This Free</h3>
+            <div class="modal-product" id="modalProduct">
+                <span id="modalProductIcon">📊</span>
+                <span id="modalProductName">Product Name</span>
+            </div>
+            <form class="modal-form" id="enquiryForm">
+                <input type="text" placeholder="Your name" required id="enquiryName">
+                <input type="email" placeholder="Your email" required id="enquiryEmail">
+                <textarea placeholder="Tell us about your use case (optional)" id="enquiryMessage"></textarea>
+                <button type="submit">Send Enquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 DHIVE. Built in South Africa 🇿🇦</p>
+    </footer>
+
+    <script>
+        // Product data
+        const productIcons = {
+            'Business Budget Planner': '📊',
+            'Social Media Template Pack': '📱',
+            'Startup Launch Guide': '🚀',
+            'Notion Productivity System': '✨',
+            'Brand Identity Kit': '🎨'
+        };
+
+        // Enquiry modal functions
+        function openEnquiry(productName) {
+            const modal = document.getElementById('enquiryModal');
+            document.getElementById('modalProductName').textContent = productName;
+            document.getElementById('modalProductIcon').textContent = productIcons[productName] || '📦';
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeEnquiry() {
+            const modal = document.getElementById('enquiryModal');
+            modal.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal on overlay click
+        document.getElementById('enquiryModal').addEventListener('click', (e) => {
+            if (e.target.id === 'enquiryModal') {
+                closeEnquiry();
+            }
+        });
+
+        // Enquiry form submission
+        document.getElementById('enquiryForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('enquiryName').value;
+            const email = document.getElementById('enquiryEmail').value;
+            const message = document.getElementById('enquiryMessage').value;
+            const product = document.getElementById('modalProductName').textContent;
+            
+            const mailtoLink = `mailto:trevorbosch4@gmail.com?subject=DHIVE Enquiry: ${product}&body=Name: ${name}%0AEmail: ${email}%0AProduct: ${product}%0A%0AMessage: ${message || 'No message provided'}`;
+            
+            window.location.href = mailtoLink;
+            
+            // Reset and close
+            document.getElementById('enquiryForm').reset();
+            closeEnquiry();
+        });
+
+        // Waitlist form handling
+        const forms = document.querySelectorAll('.waitlist-form');
+        const successMessage = document.getElementById('successMessage');
+        const mainForm = document.getElementById('waitlistForm');
+
+        forms.forEach(form => {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const emailInput = form.querySelector('input[type="email"]');
+                const email = emailInput.value;
+                const button = form.querySelector('button');
+                
+                // Disable button and show loading
+                button.disabled = true;
+                button.textContent = 'Joining...';
+
+                // Simulate API call (replace with actual endpoint)
+                // For now, we'll use mailto as fallback
+                try {
+                    // Option 1: If you set up a backend/Formspree/etc
+                    // const response = await fetch('YOUR_ENDPOINT', {
+                    //     method: 'POST',
+                    //     headers: { 'Content-Type': 'application/json' },
+                    //     body: JSON.stringify({ email })
+                    // });
+
+                    // Option 2: Store in localStorage for now + trigger mailto
+                    const waitlist = JSON.parse(localStorage.getItem('dhive_waitlist') || '[]');
+                    if (!waitlist.includes(email)) {
+                        waitlist.push(email);
+                        localStorage.setItem('dhive_waitlist', JSON.stringify(waitlist));
+                    }
+
+                    // Send notification email
+                    const mailtoLink = `mailto:trevorbosch4@gmail.com?subject=DHIVE Waitlist Signup&body=New signup: ${email}`;
+                    
+                    // Create invisible iframe to trigger mailto without navigation
+                    const iframe = document.createElement('iframe');
+                    iframe.style.display = 'none';
+                    iframe.src = mailtoLink;
+                    document.body.appendChild(iframe);
+                    setTimeout(() => iframe.remove(), 1000);
+
+                    // Show success
+                    if (form === mainForm) {
+                        mainForm.style.display = 'none';
+                        document.querySelector('.form-note').style.display = 'none';
+                        successMessage.classList.add('show');
+                    } else {
+                        button.textContent = '✓ You\'re in!';
+                        button.style.background = 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)';
+                        emailInput.value = '';
+                    }
+
+                } catch (error) {
+                    button.textContent = 'Try Again';
+                    button.disabled = false;
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
